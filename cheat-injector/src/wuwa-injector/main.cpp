@@ -82,7 +82,7 @@ bool OpenGameProcess(HANDLE* phProcess, HANDLE* phThread, const char* additional
 		return false;
 	}
 
-	auto filePath = GetOrSelectPath(ini, "Inject", "wuwapath", "wuwa path", "Executable\0Client-Win64-Shipping.exe;\0");
+	auto filePath = GetOrSelectPath(ini, "Inject", "wuwapath", "wuwa path", "Executable");
 	auto commandline = ini.GetValue("Inject", "WuwaCommandLine");
 
 	bool useAdditionalParamExists = ini.KeyExists("Inject", "UseAdditionalParam");
